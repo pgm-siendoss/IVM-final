@@ -30,5 +30,9 @@
 {"title": "Gebarbecuede varkensribben", "type": "voorgerechten", "price": 6.00},
 {"title": "Grote garnalen met look en kruiden", "type": "voorgerechten", "price": 8.50},
 {"title": "Gambas met look", "type": "voorgerechten", "price": 10.00},
-{"title": "Gebakken kikkerbilletjes met lookboter en uien", "type": "voorgerechten", "price": 7.00}
+{"title": "Gebakken kikkerbilletjes met lookboter en uien", "type": "voorgerechten", "price": 7.00},
+{"title": "Dim Sum (gestoomde specialiteiten)", "type": "chinese dim sum", "price": 7.00},
+{"title": "Ha Kou (gestoomde gamalenpasteitjes)", "type": "chinese dim sum", "price": 6.00},
+{"title": "Sui Mai (gestoomde vleespasteitjes)", "type": "chinese dim sum", "price": 6.00},
+{"title": "Shanghai Long Bao (gegrild varkensvlees)", "type": "chinese dim sum", "price": 6.00}
 ]
