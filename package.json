@@ -14,7 +14,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch": "concurrently npm:styles npm:scripts",
+    "styles": "npx sass src/styles/main.scss public/build/main.css --watch",
+    "scripts": "esbuild src/scripts/main.js --bundle --outfile=public/build/main.js --watch"
   },
   "eslintConfig": {
     "extends": [
@@ -33,5 +36,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "esbuild": "^0.14.42",
+    "sass": "^1.52.1"
   }
 }
