@@ -1,25 +1,25 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import logo from './logo.svg';
 import './App.css';
-import BaseLayout from './layouts/BaseLayout';
-import { NotFound } from './pages/NotFound';
-import Home from './pages/Home';
-import Selection from './pages/Selection';
-import Order from './pages/Order';
-import Pay from './pages/Pay';
 
-const App = () => {
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<BaseLayout/>}>
-        <Route index element={<Home/>} />
-        <Route index element={<Selection/>} />
-        <Route index element={<Order/>} />
-        <Route index element={<Pay/>} />
-        <Route path="*" element={<NotFound/>} />
-      </Route>
-    </Routes>
-  )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
