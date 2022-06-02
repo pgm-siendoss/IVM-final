@@ -40,9 +40,7 @@ const Nav = () => {
         <NavList>
           {Object.keys(ROUTES).map((route) => (
             <li key={route}>
-              <NavItem
-                to={ROUTES[route]}
-              >
+              <NavItem to={ROUTES[route]}>
                 {route.toLowerCase()}
               </NavItem>
             </li>
