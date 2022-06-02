@@ -1,9 +1,43 @@
-import React from 'react'
+import { DISHES_API } from "../constants/api";
+import React, { useEffect, useState } from "react";
+import Container from "../components/Container";
+import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
+import Item from "../components/MenuPage/Item";
+import ItemList from "../components/MenuPage/ItemList";
 
+/*
 const Home = () => {
   return (
     <div>Home</div>
   )
 }
 
-export default Home
+export default Home*/
+
+const Home = () => {
+  const [search, setSearch] = useState("");
+  const [dishes, dishesError, dishesLoading] = useFetch(DISHES_API);
+
+  const filteredDishes = dishes?.filter((dish) => dish.title.includes(search));
+
+  return (
+    <>
+      <Item/>
+      {dishesLoading && <p>Loading...</p>}
+      {dishesError && <p>Something went wrong...</p>}
+      {dishes && (
+        <>
+          <h1>Posts</h1>
+          <input
+            placeholder="Search a post"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </>
+      )}
+    </>
+  );
+};
+
+export default Home;
