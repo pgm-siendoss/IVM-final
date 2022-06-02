@@ -1,1 +1,1 @@
-export const DISHES_API = 'https://adriaanglibert.github.io/todo-react/todos.json';
+export const DISHES_API = 'https://github.com/pgm-siendoss/IVM-final/blob/main/docs/dishes.json';
