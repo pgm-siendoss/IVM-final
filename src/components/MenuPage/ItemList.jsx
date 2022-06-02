@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../assets/images/hamburger.svg';
 
 import { Link } from "react-router-dom";
-import { getUrl } from "../helper";
+import { getUrl } from "../../helper";
 import styled from "styled-components";
 
 const CardList = styled.ul`
@@ -31,22 +31,19 @@ const ListLink = styled.a`
 const ItemList = ({ items, dynamicUrl, dynamicKey = "id", labelKey = "title" }) => {
   return (
     <>
-        <div>
-        <img src={logo} />
-            <span>
-                Dish Name
-            </span>
-            <span>
-                Dish description
-            </span>
-        </div>
         <CardList>
           {items.map((item) => (
             <ListItem key={item[dynamicKey]}>
               <ListLink as={Link} to={getUrl(dynamicUrl, dynamicKey, item[dynamicKey])}>
                 {item[labelKey]}
-                {item.toLowerCase()}
               </ListLink>
+              <img src={logo} />
+              <span>
+              {item.toLowerCase()}
+              </span>
+              <span>
+                Dish description
+              </span>
             </ListItem>
           ))}
         </CardList>

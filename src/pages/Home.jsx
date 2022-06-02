@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
-import Item from "../components/MenuPage/Item";
 import ItemList from "../components/MenuPage/ItemList";
 
 /*
@@ -23,7 +22,7 @@ const Home = () => {
 
   return (
     <>
-      <Item/>
+      <ItemList/>
       {dishesLoading && <p>Loading...</p>}
       {dishesError && <p>Something went wrong...</p>}
       {dishes && (
