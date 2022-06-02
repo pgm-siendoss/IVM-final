@@ -1,0 +1,1 @@
+export const DISHES_API = 'https://adriaanglibert.github.io/todo-react/todos.json';
