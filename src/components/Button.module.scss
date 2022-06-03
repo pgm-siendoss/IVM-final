@@ -19,11 +19,6 @@
     }
 }
 
-.transparent {
-    box-shadow: none;
-    background-color: #FAFAFA;
-}
-
 .square {
     font-size: 1.5rem;
     min-width: 10rem;
@@ -36,24 +31,17 @@
     margin: .8rem;
 }
 
-.long {
-    font-size: 1.5rem;
-    min-width: 22rem;
-    min-height: 10rem;
-    margin: 1rem;
+.white {
+    color: #000;
+    background-color: #FFF;
 }
 
-.black {
-    background-color: #000;
-    color: white;
-}
-
-.red {
-    background-color: #DF2027;
-    color: white;
+.green {
+    color: #FFF;
+    background-color: #22b573;
 }
 
 .pink {
-    background-color: #F5DED9;
-    color: #DF2027;
+    background-color: #cc3366;
+    color: #FFF;
 }

@@ -29,18 +29,18 @@ const Menu = () => {
       </div>
       <div className="{}">
         <Link to={ROUTES.MENU}>
-          <Button variant='square' color='black'>
-            Eat here <br/>
+          <Button variant='square' color='white'>
+            Dim Sum <br/>
           </Button>
         </Link>
         <Link to={ROUTES.MENU}>
-          <Button variant='square' color='red'>
-            Take away <br/>   
+          <Button variant='square' color='green'>
+            Voorger. <br/>   
           </Button>
         </Link>
         <Link to={ROUTES.MENU}>
-          <Button variant='square' color='red'>
-            Take away <br/>   
+          <Button variant='square' color='pink'>
+            Other <br/>   
           </Button>
         </Link>  
       </div>
