@@ -1,9 +1,13 @@
 import { DISHES_API } from "../constants/api";
 import React, { useEffect, useState } from "react";
-import Container from "../components/Container";
+import { ROUTES } from "../constants/routes";
 import { Link } from "react-router-dom";
+import { colors, global, sizes } from "../constants/styles";
 import useFetch from "../hooks/useFetch";
 import ItemList from "../components/MenuPage/ItemList";
+import Button from "../components/Button"
+import Container from "../components/Container";
+
 
 /*
 const Home = () => {
@@ -22,10 +26,25 @@ const Home = () => {
 
   return (
     <>
+      <div className="{}">
+        <h1>Welcome to Fu Lai</h1>
+        <p className="{}">
+          Welcome to Chinese & Thai restaurant <strong>Fu Lai</strong>. We're located in Oudenaarde. Check out what we got on the menu.
+        </p>
+      </div>
+      <div className="{}">
+        <Link to={ROUTES.MENU}>
+          <Button variant='square' color='black'>
+            Eat here <br/>
+          </Button>
+        </Link>
+        <Link to={ROUTES.MENU}>
+          <Button variant='square' color='red'>
+            Take away <br/>   
+          </Button>
+        </Link>       
+      </div>
       <Container>
-        <ItemList>
-
-        </ItemList>
         {dishesLoading && <p>Loading...</p>}
         {dishesError && <p>Something went wrong...</p>}
         {dishes && (
