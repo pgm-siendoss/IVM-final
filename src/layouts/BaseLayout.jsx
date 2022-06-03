@@ -1,15 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useRouter } from 'next/router';
+import { useLocation, Outlet } from "react-router-dom";
+import gsap from "gsap";
 
 import Nav from "../components/Nav";
-import { Outlet } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import gsap from "gsap";
 import { lightTheme } from "../constants/styles";
 
-export const IdleTimer = () => {
+const whitelist = [
+  '/'
+];
 
-  const router = useRouter();
+export const IdleTimer = () => {
+  const location = useLocation();
   let timeout = null;
 
   const goBackToHome = () => {
@@ -25,22 +27,30 @@ export const IdleTimer = () => {
     }, 1000 * 30);
   };
 
-  const onMouseMove = () => {
-    restartAutoReset();
-  };
-
   useEffect(() => {
+    //whitelist the home page
+    let preventReset = false;
+    for (const path of whitelist) {
+      if (path === location.pathname) {
+        preventReset = true;
+      }
+    }
+    if (preventReset) {
+      return;
+    }
+
+    // start the timeout and mouse checks
     restartAutoReset();
-    window.addEventListener('mousemove', _onMouseMove);
+    window.addEventListener('mousemove', restartAutoReset);
 
     // cleanup function
     return () => {
       if (timeout) {
         clearTimeout(timeout);
-        window.removeEventListener('mousemove', onMouseMove);
+        window.removeEventListener('mousemove', restartAutoReset);
       }
     };
-  }, [router.pathname]);
+  }, [location.pathname]);
 
   return (
     <>
