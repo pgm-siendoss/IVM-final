@@ -6,7 +6,7 @@ import React from "react";
 import styled from "styled-components";
 
 const NavContainer = styled.nav`
-  background: ${colors.secondary};
+  background: ${colors.base};
   display: flex;
   justify-content: flex-end;
 `;
@@ -14,10 +14,10 @@ const NavContainer = styled.nav`
 const NavList = styled.ul`
   display: flex;
   justify-content: space-between;
-  gap: 1rem;
   margin: 0;
-  list-style: none;
   padding: 0 3rem;
+  gap: 1rem;
+  list-style: none;
   background-color: ${colors.light};
   border-bottom-left-radius: 1rem;
 `;
@@ -30,7 +30,7 @@ const NavItem = styled(NavLink)`
   color: ${colors.dark};
   text-transform: capitalize;
   &.active {
-    color: ${colors.primary};
+    color: ${colors.accent};
   }
 `;
 

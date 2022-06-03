@@ -1,5 +1,5 @@
 export const global = Object.freeze({
-    bodyFamily: "'Poppins', sans-serif",
+    bodyFamily: "'Poppins', 'Segoe UI', 'Roboto', sans-serif",
     displayFamily: "'PP Woodland', serif"
 });
 
@@ -8,9 +8,10 @@ export const colors = Object.freeze({
     medium: '#F4F4F4',
     dark: '#222222',
     gray: '#808080',
-    accent: '#00061C',
-    primary: '#FF7600',
-    secondary: '#173300',
+    accent: '#96c934',
+    primary: '#22b573',
+    secondary: '#cc3366',
+    base: '#dedede',
     succes: '#00760B',
     danger: '#FF3B00'
 });
@@ -25,9 +26,9 @@ export const sizes = Object.freeze({
 })
 
 export const lightTheme = {
-    bg: colors.light,
+    bg: colors.base,
     text: colors.dark,
-    body: colors.secondary,
+    body: colors.dark,
     accent: colors.primary,
 };
 
