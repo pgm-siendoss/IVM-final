@@ -11,13 +11,10 @@
     svg {
         width: 6rem;
     }
-
-    /* Adding transformation when the button is active */
     
     &:active {
-        transform: scale(1.05);
-        /* Scaling button to 0.98 to its original size */
-        box-shadow: 3px 2px 22px 1px rgba(66, 66, 66, 0.24);
+        transform: scale(1.10);
+        box-shadow: 0.15rem 0.15rem 1.3px 0.0625rem rgba(66, 66, 66, 0.24);
         /* Lowering the shadow */
     }
 }
