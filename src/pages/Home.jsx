@@ -22,19 +22,23 @@ const Home = () => {
 
   return (
     <>
-      
-      {dishesLoading && <p>Loading...</p>}
-      {dishesError && <p>Something went wrong...</p>}
-      {dishes && (
-        <>
-          <h1>Posts</h1>
-          <input
-            placeholder="Search a dish"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </>
-      )}
+      <Container>
+        <ItemList>
+
+        </ItemList>
+        {dishesLoading && <p>Loading...</p>}
+        {dishesError && <p>Something went wrong...</p>}
+        {dishes && (
+          <>
+            <h1>Posts</h1>
+            <input
+              placeholder="Search a dish"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </>
+        )}
+      </Container>
     </>
   );
 };
